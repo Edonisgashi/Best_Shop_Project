@@ -10,3 +10,232 @@
   --ff-open-sans: "Open Sans", sans-serif;
   --ff-raleway: "Raleway", sans-serif;
 }
+.container {
+  display: flex;
+}
+.header__container {
+  height: 70px;
+  box-shadow: 0px 3px 6px #00000029;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.menu-list {
+  display: flex;
+}
+.list__link {
+  color: var(--color-grey);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  padding: 28px 18px 22px;
+  border-bottom: 4px solid transparent;
+  letter-spacing: 0.1875rem;
+}
+.list__link:hover {
+  color: var(--color-black);
+  border-color: var(--color-primary);
+}
+.logo {
+  font-family: var(--ff-raleway);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.list__element {
+  padding: 0 26px;
+}
+.list__element:last-child {
+  padding-right: 0;
+}
+
+.opening {
+  margin-top: 200px;
+  height: 712px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.opening__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+.opening img {
+  height: 684px;
+  width: 100%;
+}
+.opening__header {
+  font-family: var(--ff-raleway);
+  font-weight: 400;
+  color: var(--color-black);
+  font-size: 49px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.opening__paragraph {
+  font-family: var(--ff-open-sans);
+  font-weight: 400;
+  color: var(--color-black);
+  text-align: center;
+  padding-bottom: 20px;
+}
+.btn {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  padding: 16px 65px;
+  border-radius: 40px;
+  border: none;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  border-radius: 40px;
+  box-shadow: 3px 10px 14px var(--color-primary-shadow);
+}
+
+.btn--large {
+  padding: 22px 155px;
+}
+.statistics {
+  height: 531px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.statistics__header {
+  font-family: var(--ff-raleway);
+  font-weight: 400;
+  font-size: 36px;
+  padding-top: 100px;
+}
+.statistics__container {
+  width: 60%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.statistic__element {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.statistics__number {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: var(--ff-raleway);
+  letter-spacing: 5px;
+}
+.statistics__description {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: var(--ff-raleway);
+  color: var(--color-grey);
+}
+.img__circle {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  border-radius: 50%;
+}
+.statistics__img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  /* top: 0; */
+  left: 50%;
+  transform: translate(0, -50%);
+}
+.red__circle {
+  background-color: #fb3b64;
+}
+.primary__circle {
+  background-color: var(--color-primary);
+}
+.green__circle {
+  background-color: var(--color-green);
+}
+.benefits__info {
+  height: 1400px;
+  margin-top: 100px;
+}
+.benefits {
+  margin: 0 auto;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.first,
+.second,
+.third {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  height: 370px;
+}
+.benefits__text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-left: 20px;
+}
+.first .benefits__img,
+.second .benefits__img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+/* .macbook__img {
+  width: 300px;
+} */
+.benefits__title {
+  font-size: 36px;
+  font-family: var(--ff-raleway);
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+.benefits__paragraphs {
+  font-family: var(--ff-open-sans);
+}
+.second {
+  flex-direction: row-reverse;
+}
+
+.second img {
+  height: 326px;
+}
+.third {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.third .benefits__text {
+  border-right: 2px solid black;
+  width: 50%;
+}
+.third .benefits__img {
+  border-left: 2px solid black;
+  width: 30%;
+}
