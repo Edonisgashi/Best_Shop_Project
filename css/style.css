@@ -204,6 +204,13 @@
   background-color: #fb3b64;
   margin-top: 40px;
 }
+.benefits__border {
+  background-color: var(--color-green);
+  margin-top: 50px;
+  margin-left: 0;
+  height: 3px;
+  width: 75%;
+}
 .second .benefits__text::after {
   content: "";
   width: 50%;
@@ -214,7 +221,7 @@
 .third .benefits__text::after {
   content: "";
   width: 50%;
-  height: 3px;
+  height: 2px;
   background-color: #08a6e4;
   margin-top: 50px;
 }
@@ -282,6 +289,7 @@
 }
 .benefits__paragraphs {
   font-family: var(--ff-open-sans);
+  padding-bottom: 20px;
 }
 .second {
   flex-direction: row-reverse;
@@ -289,8 +297,7 @@
 .second img {
   height: 326px;
 }
-.second .benefits__img {
-}
+
 .second .benefits__img::after {
   content: "";
   background-color: var(--color-primary);
