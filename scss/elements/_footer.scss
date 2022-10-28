@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  height: 90px;
+  background-color: var(--color-light-grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -5px 40px #00000029;
+}
+.footer__text {
+  padding-left: 40px;
+}
+.footer__title {
+  color: var(--color-primary);
+  font-size: 26px;
+  font-family: var(--ff-raleway);
+  font-weight: 300;
+}
+.footer__description {
+  font-family: var(--ff-open-sans);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--color-grey);
+  padding-top: 10px;
+}
+.footer__logos {
+  padding-right: 130px;
+}
+.footer__logos img {
+  margin-right: 25px;
+}

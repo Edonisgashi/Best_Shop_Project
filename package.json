@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Edonisgashi/Best_Shop_Project/issues"
   },
-  "homepage": "https://github.com/Edonisgashi/Best_Shop_Project#readme"
+  "homepage": "https://github.com/Edonisgashi/Best_Shop_Project#readme",
+  "main": "index.js"
 }

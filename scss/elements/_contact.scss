@@ -1,0 +1,31 @@
+.contact__container {
+  width: 50%;
+  /* border: 1px solid black; */
+  margin: 110px auto;
+  display: flex;
+  justify-content: space-between;
+  height: 376px;
+}
+.contact__column {
+  display: flex;
+  width: 45%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin-bottom: 50px; */
+}
+.contact__title {
+  font-size: 40px;
+  font-family: var(--ff-raleway);
+  font-weight: 400;
+  padding-top: 5px;
+}
+.contact__instruction {
+  font-family: var(--ff-open-sans);
+}
+.details__item {
+  color: var(--color-grey);
+  text-decoration: none;
+
+  padding-right: 15px;
+}
