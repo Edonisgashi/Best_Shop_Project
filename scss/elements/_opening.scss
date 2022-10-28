@@ -43,9 +43,9 @@
 }
 
 .btn--primary {
-  background-color: var(--color-primary);
+  background-color: $color-primary;
   border-radius: 40px;
-  box-shadow: 3px 10px 14px var(--color-primary-shadow);
+  box-shadow: 3px 10px 14px $color-primary-shadow;
 }
 
 .btn--large {

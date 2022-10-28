@@ -11,16 +11,16 @@
   padding-left: 40px;
 }
 .footer__title {
-  color: var(--color-primary);
+  color: $color-primary;
   font-size: 26px;
-  font-family: var(--ff-raleway);
+  font-family: $font-raleway;
   font-weight: 300;
 }
 .footer__description {
-  font-family: var(--ff-open-sans);
+  font-family: $font-open-sans;
   font-weight: 400;
   font-size: 11px;
-  color: var(--color-grey);
+  color: $color-grey;
   padding-top: 10px;
 }
 .footer__logos {
@@ -28,4 +28,9 @@
 }
 .footer__logos img {
   margin-right: 25px;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
 }

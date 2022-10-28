@@ -12,7 +12,7 @@
   display: flex;
 }
 .list__link {
-  color: var(--color-grey);
+  color: $color-grey;
   font-weight: 700;
   font-size: 0.6875rem;
   text-transform: uppercase;
@@ -21,14 +21,14 @@
   letter-spacing: 0.1875rem;
 }
 .list__link:hover {
-  color: var(--color-black);
-  border-color: var(--color-primary);
+  color: $color-black;
+  border-color: $color-primary;
 }
 .logo {
-  font-family: var(--ff-raleway);
+  font-family: $font-raleway;
   font-size: 2rem;
   font-weight: 300;
-  color: var(--color-primary);
+  color: $color-primary;
   text-decoration: none;
 }
 .list__element {
@@ -36,4 +36,32 @@
 }
 .list__element:last-child {
   padding-right: 0;
+}
+
+@include mobile {
+  .header__container {
+    width: 100%;
+    height: 70px;
+    .header {
+      height: 100%;
+      display: flex;
+      .hamburger {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          width: 0;
+          height: 0;
+        }
+      }
+      i {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
 }

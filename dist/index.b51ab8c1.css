@@ -193,16 +193,6 @@ textarea {
 
 :root {
   box-sizing: border-box;
-  --color-primary: #08a6e4;
-  --color-primary-shadow: #07ace629;
-  --color-green: #55dfb4;
-  --color-black: #000;
-  --color-grey: #a5a5a5;
-  --color-light-grey: #f7f7f7;
-  --color-white: #fff;
-  --accent-color: #55dfb4;
-  --ff-open-sans: "Open Sans", sans-serif;
-  --ff-raleway: "Raleway", sans-serif;
 }
 
 .container {
@@ -226,7 +216,7 @@ textarea {
 }
 
 .list__link {
-  color: var(--color-grey);
+  color: #a5a5a5;
   text-transform: uppercase;
   letter-spacing: .1875rem;
   border-bottom: 4px solid #0000;
@@ -236,13 +226,13 @@ textarea {
 }
 
 .list__link:hover {
-  color: var(--color-black);
-  border-color: var(--color-primary);
+  color: #000;
+  border-color: #08a6e4;
 }
 
 .logo {
-  font-family: var(--ff-raleway);
-  color: var(--color-primary);
+  color: #08a6e4;
+  font-family: Raleway, sans-serif;
   font-size: 2rem;
   font-weight: 300;
   text-decoration: none;
@@ -254,6 +244,38 @@ textarea {
 
 .list__element:last-child {
   padding-right: 0;
+}
+
+@media only screen and (max-width: 792px) {
+  .header__container {
+    width: 100%;
+    height: 70px;
+  }
+
+  .header__container .header {
+    height: 100%;
+    display: flex;
+  }
+
+  .header__container .header .hamburger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+  }
+
+  .header__container .header .hamburger input {
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  .header__container .header i {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .opening {
@@ -306,9 +328,9 @@ textarea {
 }
 
 .btn--primary {
-  background-color: var(--color-primary);
-  box-shadow: 3px 10px 14px var(--color-primary-shadow);
+  background-color: #08a6e4;
   border-radius: 40px;
+  box-shadow: 3px 10px 14px #07ace629;
 }
 
 .btn--large {
@@ -331,8 +353,8 @@ textarea {
 }
 
 .statistics__header {
-  font-family: var(--ff-raleway);
   padding-top: 100px;
+  font-family: Raleway, sans-serif;
   font-size: 36px;
   font-weight: 400;
 }
@@ -354,17 +376,17 @@ textarea {
 }
 
 .statistics__number {
+  letter-spacing: 5px;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   font-weight: 800;
-  font-family: var(--ff-raleway);
-  letter-spacing: 5px;
 }
 
 .statistics__description {
+  color: #a5a5a5;
+  font-family: Raleway, sans-serif;
   font-size: 17px;
   font-weight: 400;
-  font-family: var(--ff-raleway);
-  color: var(--color-grey);
 }
 
 .img__circle {
@@ -388,20 +410,20 @@ textarea {
 }
 
 .primary__circle {
-  background-color: var(--color-primary);
+  background-color: #08a6e4;
 }
 
 .green__circle {
-  background-color: var(--color-green);
+  background-color: #55dfb4;
 }
 
 .benefits__info {
   height: 1400px;
-  background-color: var(--color-light-grey);
+  background-color: #f7f7f7;
   margin-top: 100px;
 }
 
-.benefits {
+.benefits__info .benefits {
   height: 100%;
   width: 80%;
   flex-direction: column;
@@ -425,9 +447,9 @@ textarea {
 }
 
 .benefits__border {
-  background-color: var(--color-green);
   height: 3px;
   width: 75%;
+  background-color: #55dfb4;
   margin-top: 50px;
   margin-left: 0;
 }
@@ -459,7 +481,7 @@ textarea {
 
 .first, .second, .third {
   height: 370px;
-  background-color: var(--color-white);
+  background-color: #fff;
   flex-direction: row;
   display: flex;
 }
@@ -500,14 +522,14 @@ textarea {
 
 .benefits__title {
   font-size: 36px;
-  font-family: var(--ff-raleway);
+  font-family: v "Raleway", sans-serif;
   padding-bottom: 20px;
   font-weight: 400;
 }
 
-.benefits__paragraphs {
-  font-family: var(--ff-open-sans);
+.benefits__title .benefits__paragraphs {
   padding-bottom: 20px;
+  font-family: Open Sans, sans-serif;
 }
 
 .second {
@@ -520,9 +542,9 @@ textarea {
 
 .second .benefits__img:after {
   content: "";
-  background-color: var(--color-primary);
   width: 320px;
   height: 320px;
+  background-color: #08a6e4;
   border-radius: 50%;
   position: absolute;
   top: 5px;
@@ -530,10 +552,10 @@ textarea {
 }
 
 .benefits__first {
-  background-color: var(--color-white);
   height: 100%;
   width: 50%;
   box-shadow: none;
+  background-color: #fff;
   border: 1px solid #e8e9ed;
   border-radius: 5px;
   justify-content: space-between;
@@ -546,37 +568,31 @@ textarea {
 .third {
   width: 100%;
   height: 370px;
-  background-color: var(--color-light-grey);
+  background-color: #f7f7f7;
   border-bottom: none;
   justify-content: space-between;
   display: flex;
 }
 
-.benefits__first .benefits__text {
-  margin: 75px 35px;
-}
-
 .third .benefits__text {
-  width: 50%;
-  margin-right: 7.5%;
+  width: 60%;
   padding-left: 40px;
   padding-right: 40px;
 }
 
 .third .benefits__img {
-  background-color: var(--accent-color);
   width: 35%;
   opacity: 1;
+  background-color: #55dfb4;
   border: none;
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  margin-left: 7.5%;
   display: flex;
   box-shadow: 0 3px 6px #00000029;
 }
 
-.trumpet__img {
+.third .benefits__img .trumpet__img {
   width: 295px;
   height: auto;
   margin-top: 55px;
@@ -592,10 +608,10 @@ textarea {
 }
 
 .pricing__header {
-  font-size: 42px;
-  font-family: var(--ff-raleway);
   flex-direction: row;
   justify-content: center;
+  font-family: Raleway, sans-serif;
+  font-size: 42px;
   font-weight: 400;
   display: flex;
 }
@@ -615,16 +631,16 @@ textarea {
 }
 
 .larger__card {
-  border: 1px solid var(--color-primary);
   opacity: 1;
   opacity: 1;
+  border: 1px solid #08a6e4;
   border-radius: 18px;
   transform: scale(1.1);
-  box-shadow: 5px 10px 27px #07ace629;
+  box-shadow: 5px 10px 27px #158bb629;
 }
 
 .larger__card .pricing__price {
-  color: var(--color-primary);
+  color: #08a6e4;
   justify-content: center;
   display: flex;
 }
@@ -635,8 +651,8 @@ textarea {
 }
 
 .third__card {
-  border: 1px solid var(--color-green);
   opacity: 1;
+  border: 1px solid #55dfb4;
   border-radius: 18px;
 }
 
@@ -645,19 +661,20 @@ textarea {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  transition: all .5s;
   display: flex;
 }
 
 .pricing__type {
-  font-family: var(--ff-raleway);
+  font-family: Raleway, sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
 
 .pricing__price {
-  font-family: var(--ff-open-sans);
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: Open Sans, sans-serif;
   font-size: 46px;
   font-weight: 300;
 }
@@ -667,7 +684,7 @@ textarea {
 }
 
 .pricing__green {
-  color: var(--color-green);
+  color: #55dfb4;
 }
 
 .card__list {
@@ -681,7 +698,7 @@ textarea {
 }
 
 .card__list .card__list__items {
-  font-family: var(--ff-open-sans);
+  font-family: Open Sans, sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -691,8 +708,17 @@ textarea {
 }
 
 .pricing__cards .pricing__price span {
+  font-family: Raleway, sans-serif;
   font-size: 2px;
-  font-family: var(--ff-raleway);
+}
+
+.pricing__cards:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px #000;
+}
+
+.larger__card:hover {
+  transform: scale(1.2);
 }
 
 .contact__container {
@@ -712,18 +738,18 @@ textarea {
 }
 
 .contact__title {
-  font-size: 40px;
-  font-family: var(--ff-raleway);
   padding-top: 5px;
+  font-family: Raleway, sans-serif;
+  font-size: 40px;
   font-weight: 400;
 }
 
 .contact__instruction {
-  font-family: var(--ff-open-sans);
+  font-family: Open Sans, sans-serif;
 }
 
 .details__item {
-  color: var(--color-grey);
+  color: #a5a5a5;
   padding-right: 15px;
   text-decoration: none;
 }
@@ -754,7 +780,7 @@ textarea {
 
 .form__label {
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: #08a6e4;
   letter-spacing: 3px;
   font-size: .6875rem;
   font-weight: bold;
@@ -762,9 +788,9 @@ textarea {
 }
 
 .form__input {
-  border: none;
-  border-bottom: 1px solid var(--color-grey);
   background-color: #0000;
+  border: none;
+  border-bottom: 1px solid #a5a5a5;
   line-height: 2.625rem;
 }
 
@@ -792,8 +818,8 @@ textarea {
 .form__checkbox .checkbox {
   height: 25px;
   width: 25px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-grey);
+  background-color: #fff;
+  border: 1px solid #a5a5a5;
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -822,16 +848,16 @@ textarea {
 }
 
 .footer__title {
-  color: var(--color-primary);
+  color: #08a6e4;
+  font-family: Raleway, sans-serif;
   font-size: 26px;
-  font-family: var(--ff-raleway);
   font-weight: 300;
 }
 
 .footer__description {
-  font-family: var(--ff-open-sans);
-  color: var(--color-grey);
+  color: #a5a5a5;
   padding-top: 10px;
+  font-family: Open Sans, sans-serif;
   font-size: 11px;
   font-weight: 400;
 }
@@ -841,7 +867,13 @@ textarea {
 }
 
 .footer__logos img {
+  cursor: pointer;
   margin-right: 25px;
+  transition: all .5s;
+}
+
+.footer__logos img:hover {
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=index.b51ab8c1.css.map */

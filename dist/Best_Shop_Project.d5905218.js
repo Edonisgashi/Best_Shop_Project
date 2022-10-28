@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"6jqFa":[function(require,module,exports) {
+})({"4gvmk":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
@@ -504,6 +504,6 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"4gOyy":[function(require,module,exports) {
 
-},{}]},["6jqFa","4gOyy"], "4gOyy", "parcelRequire94c2")
+},{}]},["4gvmk","4gOyy"], "4gOyy", "parcelRequire94c2")
 
 //# sourceMappingURL=Best_Shop_Project.d5905218.js.map

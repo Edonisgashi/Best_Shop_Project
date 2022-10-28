@@ -12,7 +12,7 @@
   align-items: center;
 }
 .statistics__header {
-  font-family: var(--ff-raleway);
+  font-family: $font-raleway;
   font-weight: 400;
   font-size: 36px;
   padding-top: 100px;
@@ -36,14 +36,14 @@
 .statistics__number {
   font-size: 20px;
   font-weight: 800;
-  font-family: var(--ff-raleway);
+  font-family: $font-raleway;
   letter-spacing: 5px;
 }
 .statistics__description {
   font-size: 17px;
   font-weight: 400;
-  font-family: var(--ff-raleway);
-  color: var(--color-grey);
+  font-family: $font-raleway;
+  color: $color-grey;
 }
 .img__circle {
   width: 64px;
@@ -61,11 +61,11 @@
   transform: translate(0, -50%);
 }
 .red__circle {
-  background-color: #fb3b64;
+  background-color: $color-redish;
 }
 .primary__circle {
-  background-color: var(--color-primary);
+  background-color: $color-primary;
 }
 .green__circle {
-  background-color: var(--color-green);
+  background-color: $color-green;
 }

@@ -8,7 +8,7 @@
 }
 .pricing__header {
   font-size: 42px;
-  font-family: var(--ff-raleway);
+  font-family: $font-raleway;
   font-weight: 400;
   display: flex;
   flex-direction: row;
@@ -23,29 +23,29 @@
 }
 
 .first__card {
-  border: 1px solid #fb3b64;
+  border: 1px solid $color-redish;
   border-radius: 18px;
   opacity: 1;
 }
 .larger__card {
-  border: 1px solid var(--color-primary);
+  border: 1px solid $color-primary;
   border-radius: 18px;
   opacity: 1;
   transform: scale(1.1);
-  box-shadow: 5px 10px 27px #07ace629;
+  box-shadow: 5px 10px 27px $shadow-color;
   opacity: 1;
 }
 .larger__card .pricing__price {
   display: flex;
   justify-content: center;
-  color: var(--color-primary);
+  color: $color-primary;
 }
 .larger__card span {
   display: flex;
   justify-content: center;
 }
 .third__card {
-  border: 1px solid var(--color-green);
+  border: 1px solid $color-green;
   border-radius: 18px;
   opacity: 1;
 }
@@ -55,14 +55,15 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  transition: 0.5s;
 }
 .pricing__type {
-  font-family: var(--ff-raleway);
+  font-family: $font-raleway;
   font-weight: 700;
   font-size: 24px;
 }
 .pricing__price {
-  font-family: var(--ff-open-sans);
+  font-family: $font-open-sans;
   font-weight: 300;
   font-size: 46px;
   margin-top: 20px;
@@ -72,7 +73,7 @@
   color: #fb3b64;
 }
 .pricing__green {
-  color: var(--color-green);
+  color: $color-green;
 }
 .card__list {
   display: flex;
@@ -85,7 +86,7 @@
 }
 
 .card__list .card__list__items {
-  font-family: var(--ff-open-sans);
+  font-family: $font-open-sans;
   font-weight: 400;
   font-size: 14px;
 }
@@ -94,5 +95,12 @@
 }
 .pricing__cards .pricing__price span {
   font-size: 2px;
-  font-family: var(--ff-raleway);
+  font-family: $font-raleway;
+}
+.pricing__cards:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px $color-black;
+}
+.larger__card:hover {
+  transform: scale(1.2);
 }
