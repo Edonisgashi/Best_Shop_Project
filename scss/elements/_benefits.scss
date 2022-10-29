@@ -177,16 +177,23 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-
     .first {
       display: flex;
       height: 370px;
       flex-direction: column-reverse;
       justify-content: space-between;
       align-items: center;
-      .benefits__text::after {
-        content: "";
-        opacity: 0;
+      .benefits__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 50%;
+        width: 90%;
+        padding: 10px;
+        &::after {
+          content: "";
+          opacity: 0;
+        }
       }
       .benefits__img::after {
         content: "";
@@ -212,18 +219,29 @@
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
-      .benefits__text::after {
-        content: "";
-        opacity: 0;
+      position: relative;
+      .benefits__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 50%;
+        width: 90%;
+        padding: 10px;
+        *::after {
+          content: "";
+          opacity: 0;
+        }
       }
+
       .benefits__img::after {
         content: "";
-        width: 140px;
-        height: 140px;
-        top: 30;
-        right: 20;
+        width: 100px;
+        height: 100px;
+        top: 20;
+        left: 20;
         background-color: $color-primary;
         border-radius: 50%;
+        position: absolute;
       }
       .benefits__img,
       .benefits__text {
@@ -247,26 +265,35 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        .benefits__text {
+          display: flex;
+          flex-direction: column;
+
+          height: 50%;
+          width: 90%;
+          padding-top: 30px;
+          padding-right: 150px;
+          &::after {
+            content: "";
+            opacity: 0;
+          }
+        }
         .benefits__border {
           width: 0;
           height: 0;
           opacity: 0;
         }
-        .benefits__text {
-          padding-top: 30px;
-          padding-right: 150px;
-        }
       }
 
-      .benefits__img,
-      .benefits__text {
+      .benefits__img {
         height: 50%;
         width: 100%;
         margin: 0 auto;
-      }
-      .benefits__img img {
-        height: 60%;
-        width: 60%;
+
+        & img {
+          height: 60%;
+          width: 60%;
+        }
       }
     }
   }
