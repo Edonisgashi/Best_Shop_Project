@@ -22,23 +22,33 @@
     />
   </head>
   <body>
-    <div class="header__container">
-      <header class="header">
+    <header class="header">
+      <div class="header__container container">
         <a href="#" class="logo">BestShop</a>
-        <label for="checkbox" class="hamburger">
-          <input type="checkbox" name="checkbox" id="checkbox" />
-          <i class="fa-solid fa-bars"></i>
-        </label>
         <nav>
-          <ul class="menu-list">
-            <li class="list__element"><a class="list__link">why us</a></li>
-            <li class="list__element"><a class="list__link">benefits</a></li>
-            <li class="list__element"><a class="list__link">prices</a></li>
-            <li class="list__element"><a class="list__link">contact </a></li>
+          <input type="checkbox" class="menu__btn" id="menu__btn" />
+          <label for="menu__btn" class="menu__toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="header__nav">
+            <li class="nav__element">
+              <a href="#why-us" class="nav__link">Why us</a>
+            </li>
+            <li class="nav__element">
+              <a href="#benefits" class="nav__link">Benefits</a>
+            </li>
+            <li class="nav__element">
+              <a href="#prices" class="nav__link">Prices</a>
+            </li>
+            <li class="nav__element">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
           </ul>
         </nav>
-      </header>
-    </div>
+      </div>
+    </header>
     <section class="opening">
       <div class="opening__content">
         <h1 class="opening__header">Sell More!</h1>

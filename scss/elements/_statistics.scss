@@ -69,3 +69,30 @@
 .green__circle {
   background-color: $color-green;
 }
+@include mobile {
+  .statistics {
+    width: 80%;
+    height: 755px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__header {
+      text-align: center;
+    }
+    &__container {
+      width: 100%;
+      height: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-top: 150px;
+      align-items: center;
+      .img__circle,
+      .statistics__number {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
