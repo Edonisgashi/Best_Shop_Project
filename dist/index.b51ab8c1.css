@@ -236,6 +236,7 @@ textarea {
   padding: 28px 18px 22px;
   font-size: .6875rem;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .header .nav__link:hover {
@@ -335,6 +336,26 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
   display: flex;
+}
+
+.btn {
+  color: #fff;
+  text-align: center;
+  width: 70%;
+  background-color: #08a6e4;
+  border: none;
+  border-radius: 40px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 3px 10px 14px #07ace629;
+}
+
+.opening img {
+  height: 300px;
+  width: 100%;
 }
 
 .opening__header {

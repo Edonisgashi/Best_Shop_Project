@@ -13,6 +13,24 @@
   justify-content: space-between;
   height: 200px;
 }
+.btn {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 40px;
+  border: none;
+  text-decoration: none;
+  background-color: $color-primary;
+  width: 70%;
+  box-shadow: 3px 10px 14px $color-primary-shadow;
+}
+.opening img {
+  height: 300px;
+  width: 100%;
+}
 
 .opening__header {
   font-family: var(--ff-raleway);
