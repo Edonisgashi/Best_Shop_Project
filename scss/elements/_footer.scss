@@ -6,6 +6,14 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 -5px 40px #00000029;
+  @include mobile {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 90px;
+  }
 }
 .footer__text {
   padding-left: 40px;
@@ -25,6 +33,11 @@
 }
 .footer__logos {
   padding-right: 130px;
+  @include mobile {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+  }
 }
 .footer__logos img {
   margin-right: 25px;
