@@ -333,6 +333,7 @@ textarea {
 
 .opening__content {
   height: 200px;
+  width: 80%;
   flex-direction: column;
   justify-content: space-between;
   display: flex;
@@ -340,7 +341,10 @@ textarea {
 
 @media only screen and (max-width: 1024px) {
   .opening__content {
-    width: 80%;
+    width: 70%;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
   }
 }
 
@@ -361,7 +365,18 @@ textarea {
 
 @media only screen and (max-width: 1024px) {
   .btn {
-    width: 20%;
+    width: 50%;
+    height: 50px;
+    align-items: center;
+    font-size: 1.7em;
+  }
+}
+
+@media only screen and (max-width: 1352px) {
+  .btn {
+    width: 30%;
+    align-items: center;
+    font-size: 2em;
   }
 }
 
@@ -881,6 +896,12 @@ textarea {
   }
 }
 
+@media only screen and (max-width: 1352px) {
+  .pricing__container {
+    width: 100%;
+  }
+}
+
 .pricing__header {
   flex-direction: row;
   justify-content: center;
@@ -958,23 +979,14 @@ textarea {
 
 @media only screen and (max-width: 792px) {
   .pricing__cards {
-    width: 90%;
+    width: 80%;
     height: 250px;
     flex-direction: row;
     justify-content: space-between;
     margin: 30px auto 0;
     display: flex;
   }
-}
 
-@media only screen and (max-width: 1024px) {
-  .pricing__cards {
-    width: 25%;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (max-width: 792px) {
   .card__details {
     width: 50%;
     padding-left: 30px;
@@ -1056,6 +1068,15 @@ textarea {
   }
 }
 
+@media only screen and (max-width: 1352px) {
+  .btn {
+    justify-content: center;
+    padding: 10px 90px;
+    font-size: 1.5em;
+    display: flex;
+  }
+}
+
 .pricing__cards .pricing__price span {
   font-family: Raleway, sans-serif;
   font-size: 2px;
@@ -1068,6 +1089,12 @@ textarea {
 
 .larger__card:hover {
   transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1352px) {
+  .red__circle, .green__circle {
+    margin-bottom: -40px;
+  }
 }
 
 .contact__container {

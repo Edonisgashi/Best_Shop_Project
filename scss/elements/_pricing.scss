@@ -13,6 +13,9 @@
   @include tablet {
     width: 100%;
   }
+  @include matebook {
+    width: 100%;
+  }
 }
 .pricing__header {
   font-size: 42px;
@@ -78,7 +81,7 @@
   transition: 0.5s;
   @include mobile {
     margin-top: 70px;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     height: 250px;
     margin-top: 30px;
@@ -86,11 +89,20 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  @include tablet {
-    width: 25%;
-    margin: 0 auto;
-  }
 }
+// @include tablet {
+//   .pricing__cards {
+//     width: 25%;
+//     margin: 0 auto;
+//   }
+// }
+
+// // @include matebook {
+// //   .pricing__cards {
+// //     width: 25%;
+// //     justify-content: space-around;
+// //   }
+// // }
 .card__details {
   @include mobile {
     width: 50%;
@@ -153,6 +165,12 @@
     display: flex;
     justify-content: center;
   }
+  @include matebook {
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+  }
 }
 .pricing__cards .pricing__price span {
   font-size: 2px;
@@ -164,4 +182,10 @@
 }
 .larger__card:hover {
   transform: scale(1.2);
+}
+.red__circle,
+.green__circle {
+  @include matebook {
+    margin-bottom: -40px;
+  }
 }
