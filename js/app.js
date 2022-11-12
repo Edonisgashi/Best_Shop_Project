@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const accountingPrice = item.querySelector(".item__price");
         accountingPrice.textContent = 18.99;
         // UPDATING SUM
+        summaryTotal.classList.add("open");
         prices.push(Number(accountingPrice.textContent));
         totalPrice.textContent = `$ ${prices
           .reduce((acc, el) => acc + el)
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (accounting && item.dataset.id === "terminal") {
         item.classList.toggle("open");
         //  UPDATING INPUT FIELDS
+        summaryTotal.classList.add("open");
         const terminalPrice = item.querySelector(".item__price");
         terminalPrice.textContent = 25.49;
         // UPDATING SUM
