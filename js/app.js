@@ -14,11 +14,15 @@ const itemsArr = [...items];
 const inputNums = document.querySelectorAll('input[type="number"]');
 const totalPrice = document.querySelector(".total__price");
 const summaryTotal = document.querySelector(".summary__total");
+const itemPrices = document.querySelectorAll(".item__price");
+console.log(itemPrices);
 
 // ADDING EVENTS TO INPUT FIELDS AND UPDATING THEIR VALUES
 
+const prices = [];
+
 inputNums.forEach(function (input) {
-  input.addEventListener("keyup", function (e) {
+  input.addEventListener("change", function (e) {
     itemsArr.forEach(function (item) {
       if (input.value.length > 0 && Number(input.value) > 0) {
         if (input.id === item.dataset.id) {
@@ -28,6 +32,8 @@ inputNums.forEach(function (input) {
           child.textContent = `${input.value} * $0.5`;
           price.textContent = `  ${Number(input.value) * 0.5}`;
           summaryTotal.classList.add("open");
+          prices.push(Number(price.textContent));
+          totalPrice.textContent = prices.reduce((acc, el) => acc + el);
         }
       } else {
         if (input.id === item.dataset.id) {
@@ -55,6 +61,8 @@ packageSelect.addEventListener("click", function () {
 
           packageCalc.textContent = `${option.textContent}`;
           packagePrice.textContent = ` 20`;
+          prices.push(Number(packagePrice.textContent));
+          totalPrice.textContent = prices.reduce((acc, el) => acc + el);
         }
       });
     });
@@ -64,6 +72,10 @@ accounting.addEventListener("click", function () {
   itemsArr.forEach(function (item) {
     if (accounting && item.dataset.id === "accounting") {
       item.classList.toggle("open");
+      const accountingPrice = item.querySelector(".item__price");
+      accountingPrice.textContent = 20;
+      prices.push(Number(accountingPrice.textContent));
+      totalPrice.textContent = prices.reduce((acc, el) => acc + el);
     }
   });
 });
@@ -71,8 +83,13 @@ terminal.addEventListener("click", function () {
   itemsArr.forEach(function (item) {
     if (accounting && item.dataset.id === "terminal") {
       item.classList.toggle("open");
+      const terminalPrice = item.querySelector(".item__price");
+      terminalPrice.textContent = 25;
+      prices.push(Number(terminalPrice.textContent));
+      totalPrice.textContent = prices.reduce((acc, el) => acc + el);
     }
   });
 });
 
 // UPDATING SUM
+console.log(prices);
