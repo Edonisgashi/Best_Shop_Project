@@ -11,7 +11,7 @@ const list = document.querySelector(".calc__summary ul");
 const items = document.querySelector(".calc__summary ul").children;
 const options = document.querySelector(".select__dropdown").children;
 const itemsArr = [...items];
-const inputNums = document.querySelectorAll('input[type="number"]');
+// const inputNums = document.querySelectorAll('input[type="number"]');
 const totalPrice = document.querySelector(".total__price");
 const summaryTotal = document.querySelector(".summary__total");
 
@@ -32,11 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
           // UPDATING SUM
           summaryTotal.classList.add("open");
           prices[0] = Number(price.textContent);
-          totalPrice.textContent = `$ ${prices.reduce((acc, el) => acc + el)} `;
+          totalPrice.textContent = `$ ${prices
+            .reduce((acc, el) => acc + el)
+            .toFixed(2)} `;
         }
       } else {
         item.classList.remove("open");
         summaryTotal.classList.remove("open");
+        prices[0] = 0;
       }
     });
   });
@@ -53,11 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
           // UPDATING SUM
           summaryTotal.classList.add("open");
           prices[1] = Number(price.textContent);
-          totalPrice.textContent = `$ ${prices.reduce((acc, el) => acc + el)} `;
+          totalPrice.textContent = `$ ${prices
+            .reduce((acc, el) => acc + el)
+            .toFixed(2)} `;
         }
       } else {
         item.classList.remove("open");
         summaryTotal.classList.remove("open");
+        prices[1] = 0;
       }
     });
   });
@@ -75,10 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // UPDATING INPUT FIELDS
             const packageCalc = item.querySelector(".item__calc");
             const packagePrice = item.querySelector(".item__price");
-            packageCalc.textContent = `${option.textContent}`;
-            packagePrice.textContent = 36.99;
             // UPDATING SUM
             summaryTotal.classList.add("open");
+
+            packageCalc.textContent = `${option.textContent}`;
+            packagePrice.textContent = 36.99;
             prices[2] = Number(packagePrice.textContent);
             totalPrice.textContent = `$ ${prices
               .reduce((acc, el) => acc + el)
@@ -88,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
   accounting.addEventListener("click", function () {
     itemsArr.forEach(function (item) {
       if (accounting.checked && item.dataset.id === "accounting") {
@@ -103,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
           .reduce((acc, el) => acc + el)
           .toFixed(2)}`;
       } else {
-        prices[4] = 0;
+        prices[3] = 0;
         totalPrice.textContent = `$ ${prices
           .reduce((acc, el) => acc + el)
           .toFixed(2)}`;
@@ -132,5 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
   console.log(prices);
 });
